@@ -31,7 +31,7 @@
   }, 25);
 </script>
 
-<div style="background-color:hsl({hue}, 100%, 50%)" class="text-center min-h-screen">
+<div style="--hue: {hue}" class="text-center min-h-screen" class:rainbow={done}>
   <div class="pt-64">
     {#if !done}
     <p class="text-8xl font-bold">{days}d {hours}h {minutes}m {seconds}s</p>
@@ -40,3 +40,9 @@
   {/if}
   </div>
 </div>
+
+<style>
+  .rainbow {
+    background-color: hsl(var(--hue), 100%, 50%);
+  }
+</style>
