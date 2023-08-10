@@ -32,7 +32,7 @@
 </script>
 
 <div style="--hue: {hue}" class="text-center min-h-screen" class:rainbow={done}>
-  <div class="pt-64">
+  <div class="pt-[40vh]">
     {#if !done}
     <p class="text-8xl font-bold">{days}d {hours}h {minutes}m {seconds}s</p>
   {:else}
