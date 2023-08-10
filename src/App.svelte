@@ -33,10 +33,15 @@
   }, 25);
 </script>
 
-<div style="--hue: {hue}" class="text-center min-h-screen" class:rainbow={done}>
+<div style="--hue: {hue}" class="text-center text-white min-h-screen bg-neutral-800" class:rainbow={done}>
   <div class="pt-[40vh]">
     {#if !done}
-    <p class="text-8xl font-bold">{days}d {hours}h {minutes}m {seconds}s</p>
+    <div class="text-8xl font-bold flex flex-row flex-wrap justify-center gap-8">
+      <p>{days}d</p>
+      <p>{hours}h</p>
+      <p>{minutes}m</p>
+      <p>{seconds}s</p>
+    </div>
   {:else}
     <p class="text-7xl font-extrabold">GREAT DANE TIME GOGOGOGOGOGOGO</p>
   {/if}
@@ -46,5 +51,6 @@
 <style>
   .rainbow {
     background-color: hsl(var(--hue), 100%, 50%);
+    color: black;
   }
 </style>
