@@ -27,7 +27,9 @@
   let hue = 0;
 
   setInterval(() => {
-    hue++;
+    if (done) {
+      hue++
+    }
   }, 25);
 </script>
 
