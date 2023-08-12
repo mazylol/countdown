@@ -1,5 +1,5 @@
 <script lang="ts">
-  let countDownDate = new Date("August 12, 2023 10:30:00").getTime();
+  let countDownDate = new Date("August 12, 2023 11:15:00").getTime();
 
   let done = false;
 
